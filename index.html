@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="src/style.css">
-    <title>Done App</title>
-  </head>
-  <body>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
 
-    <input type="button" value="Create a new task" onclick="showHideForm()">
+<!-- Header -->
+<!-- <div class="header">
+  <h1>My Website</h1>
+  <p>With a <b>flexible</b> layout.</p>
+</div> -->
 
-    <div id="root">
-        <table class="task-card">
-            <tbody>
-              <tr>
-                <td class="task-header">TASK</td>
-              </tr>
-            <tr>
-            <td class="task-content" colspan="4">Buy some Milk</td>
-            </tr>
-            <tr>
-            <td>14th May 19</td>
-            <td class="task-indicator1"></td>
-            <td class="task-indicator2"></td>
-            <td class="task-indicator3" style="background-color:red;"></td>
-            </tr>
-            </tbody>
-            </table>
+<!-- The flexible grid (content) -->
+<div class="toprow">
+    <h1>KAnBAN</h1>
+</div>
+
+
+<div class="row">
+
+    <form id="add-task-form">
+          <label style="margin: 20px 10px 20px 20px; padding-top: 10px; font-family: 'Lucida Sans'">ADD TASK</label>
+          
+          <select id="userselect" name="userSelector" style="width:150px; height: 35px; margin: 20px 10px 20px 10px;" >
+          </select>
+
+          <input  style="width:300px; height: 35px; margin: 20px 10px 20px 10px;" type="text" name="content" placeholder="  Add your task here..." required>
+          <input style="width:150px; height: 35px; margin: 20px 10px 20px 10px;" type="date" name="taskdate">
+          <button type="submit" style="width:125px; height: 35px; margin: 20px 10px 20px 10px; border-radius: 10px; color:white; background-color:rgb(74, 180, 247)" >Add Task</button>
+    </form>
+
+</div>
+
+<div style="height: 20px;">
+</div>
+
+
+<div class="row">
+ 
+    <div class="side"></div>
+
+    <div class="task-col1">
+        <h2></h2>
     </div>
 
-    <script src="src/api.js"></script>
-    <script src="src/form.js"></script>
-    <script src="src/index.js"></script>
-  </body>
+    <div class="task-col2">
+        <h2></h2>   
+    </div>
+
+    <div class="task-col3">
+        <h2></h2>
+    </div>
+
+    <div class="side"></div>
+
+</div>
+
+</body>
+
+<script src="./src/task.js"></script>
+<script src="./src/state.js"></script>
+<script src="./src/taskcontroller.js"></script>
+<script src="./src/serverapi.js"></script>
+<script src="./src/index.js"></script>
+
 </html>
